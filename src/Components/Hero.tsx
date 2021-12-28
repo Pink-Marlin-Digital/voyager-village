@@ -154,6 +154,7 @@ export const Hero = () => {
                   <a
                     href="https://www.voyagervillage.com"
                     target="_blank"
+                    rel="noreferrer"
                     className="underline text-indigo-600 hover:text-indigo-800 visited:text-indigo-600"
                   >
                     Visit the official Voyager Village website

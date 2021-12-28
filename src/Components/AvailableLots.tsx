@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import posts from "./lots";
 

@@ -1,6 +1,5 @@
+/* eslint-disable */
 import React from "react";
-import { DEFAULT_MIN_VERSION } from "tls";
-/* This example requires Tailwind CSS v2.0+ */
 const faqs = [
   {
     question: "What services are available",
