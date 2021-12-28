@@ -57,14 +57,12 @@ export const AvailableLots = () => {
                       ) : null}
                     </div>
                   </div>
-                  <a href={post.href} className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-500">
-                      {post.description}
-                    </p>
-                  </a>
+                  <p className="text-xl font-semibold text-gray-900">
+                    {post.title}
+                  </p>
+                  <p className="mt-3 text-base text-gray-500">
+                    {post.description}
+                  </p>
                 </div>
                 <div className="flex justify-around mt-6">
                   <div

@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Is there a HOA/POA Fee? ",
     answer:
-      "Yes, to maintain the ammenities of the association there is an annual fee that is currently $1120/year. This is offset by the low property taxes. Currently the lots are averaging $16-20 per year in property taxes.",
+      "Yes, to maintain the amenities of the association there is an annual fee that is currently $1120/year. This is offset by the low property taxes. Currently the lots are averaging $16-20 per year in property taxes.",
   },
   {
     question: "Can I dock a boat overnight? ",
