@@ -18,7 +18,8 @@ const faqs = [
   },
   {
     question: "Can I dock a boat overnight? ",
-    answer: "At the moment we are unsure but are working to find out",
+    answer:
+      "Voyager Village has boat slips for its members on a limited basis. You will have to add your name to a list and when one comes available you will get asked about it. There is an annual fee associated with the slips.",
   },
   {
     question: "Can I camp on the lot? ",
