@@ -22,7 +22,9 @@ export const AvailableLots = () => {
             Available Lots
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            These lots are currently available for sale
+            Flash Sale! until Jan 1st pick up any of these lots for the sale
+            price listed. After new years the price will return to its original
+            value.
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
