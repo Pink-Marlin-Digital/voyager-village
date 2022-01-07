@@ -13,7 +13,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7233",
     originalPrice: 5000,
-    salePrice: 3000,
+    salePrice: 0,
   },
   {
     title: "Birdle Trwy A Lot 6544",
@@ -29,7 +29,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=6544",
     originalPrice: 6000,
-    salePrice: 3500,
+    salePrice: 0,
   },
   {
     title: "Birdle Trwy C Lot 6546",
@@ -42,7 +42,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=6546",
     originalPrice: 6000,
-    salePrice: 3500,
+    salePrice: 0,
   },
   {
     title: "Fox Ridge Trce Lot 7298",
@@ -55,7 +55,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7298",
     originalPrice: 5000,
-    salePrice: 3000,
+    salePrice: 0,
   },
   {
     title: "Honey Tree Rd Lot 7594",
@@ -68,7 +68,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7594",
     originalPrice: 5000,
-    salePrice: 3000,
+    salePrice: 0,
   },
 ];
 

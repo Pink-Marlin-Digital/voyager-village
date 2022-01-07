@@ -7,6 +7,11 @@ const faqs = [
       "Currently the only services available are cable and power at the road. SirenTel is slated to be offering Fiber Optic internet to the area this summer. Water will have to come from a well. Sewer will be a septic sytem. Neither are currenty installed on the lots. ",
   },
   {
+    question: "Do they allow Air BnB/Short Term Rentals?",
+    answer:
+      "Yes, Short term rentals are allowed but regulated by Burnett county.",
+  },
+  {
     question: "Are they open year round?",
     answer:
       "Yes, this is a year round association. Things slow down in the winter but many of the activities are still available in the winter. Try out our XC Ski trails or rev up the snowmobile on the miles of trails in the area.",
