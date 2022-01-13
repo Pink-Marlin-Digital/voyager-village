@@ -22,9 +22,7 @@ export const AvailableLots = () => {
             Available Lots
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Flash Sale! until Jan 1st pick up any of these lots for the sale
-            price listed. After new years the price will return to its original
-            value.
+            All lots in Voyager Village are 1/2 acre.
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -122,13 +120,65 @@ export const AvailableLots = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex justify-center mt-6">
-                  <a
-                    href={`mailto:kenny@stargazerllc.com?subject=${post.title} property`}
-                    className={linkClassName}
+                <div className="flex justify-around mt-6">
+                  <div
+                    className="border-2 rounded p-2 flex justify-center"
+                    style={{ flexBasis: "40%" }}
                   >
-                    Contact us about this property
-                  </a>
+                    <a
+                      href={post.mapLink}
+                      rel="noreferrer"
+                      className={`${linkClassName} mt-2 flex flex-col text-center justify-center`}
+                    >
+                      <svg
+                        className="h-6 w-6 mx-auto"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+
+                      <span>Address</span>
+                    </a>
+                  </div>
+                  <div
+                    className="border-2 rounded flex p-2 justify-center"
+                    style={{ flexBasis: "40%" }}
+                  >
+                    <a
+                      href={`mailto:kenny@stargazerllc.com?subject=${post.title} property`}
+                      className={`${linkClassName} flex flex-col text-center justify-center`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <svg
+                        className="h-6 w-6 mx-auto"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span>Contact Us</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
