@@ -13,46 +13,12 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7233",
     originalPrice: 5000,
-    salePrice: 0,
+    salePrice: 2999,
     mapLink:
       "https://maps.apple.com/?address=Fox%20Ridge%20Pass,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.947198,-92.216367&q=Voyager%20Village%20Lot-a&_ext=EiYpFs2pXq74RkAx3q91/z8OV8A5lKLPutT5RkBBHqlRU2wNV8BQBA%3D%3D",
   },
   {
-    title: "Birdle Trwy A Lot 6544",
-    category: {
-      name: "Lot For Sale",
-      href: "https://maps.apple.com/?address=28001%E2%80%9328099%20Bridle%20Trail,%20Webster,%20WI%20%2054893,%20United%20States&ll=45.933204,-92.211509&q=Marked%20Location&_ext=EiYp2Mw3veX2RkAxANNOJvINV8A5VqJdGQz4RkBBVubIhx4NV8BQBA%3D%3D",
-    },
-    description:
-      "This lot backs up to the community center's open field. Off the public road Bridle Trl. ",
-    imageUrl: "/Lot_6544.jpg",
-    gisInfo:
-      "https://burnettcowi.wgxtreme.com/?parcelid=07-012-2-40-15-22-5%2015-070-058000",
-    propertyTaxLink:
-      "https://web.burnettcounty.org/access/master.asp?paprpid=6544",
-    originalPrice: 6000,
-    salePrice: 0,
-    mapLink: "https://maps.apple.com/?address=28079%20Bridle%20Trail,%20Webster,%20WI%20%2054893,%20United%20States&ll=45.933297,-92.211289&q=Marked%20Location&_ext=EiYpzWYfZtv2RkAxL6RkhN4NV8A5SzxFwgH4RkBB46At5goNV8BQAw%3D%3D"
-  },
-  {
-    title: "Birdle Trwy C Lot 6546",
-    category: {
-      name: "Lot For Sale",
-      href: "https://maps.apple.com/?address=28001%E2%80%9328099%20Bridle%20Trail,%20Webster,%20WI%20%2054893,%20United%20States&ll=45.933204,-92.211509&q=Marked%20Location&_ext=EiYp2Mw3veX2RkAxANNOJvINV8A5VqJdGQz4RkBBVubIhx4NV8BQBA%3D%3D",
-    },
-    description:
-      "This lot backs up to the community center's open field. POA land to the west of propery that does not have plans for new development and probably never will.",
-    imageUrl: "/Lot_6546.jpg",
-    gisInfo:
-      "https://burnettcowi.wgxtreme.com/?parcelid=07-012-2-40-15-22-5%2015-070-060000",
-    propertyTaxLink:
-      "https://web.burnettcounty.org/access/master.asp?paprpid=6546",
-    originalPrice: 6000,
-    salePrice: 0,
-    mapLink: "https://maps.apple.com/?address=28079%20Bridle%20Trail,%20Webster,%20WI%20%2054893,%20United%20States&ll=45.933297,-92.211289&q=Marked%20Location&_ext=EiYpzWYfZtv2RkAxL6RkhN4NV8A5SzxFwgH4RkBB46At5goNV8BQAw%3D%3D"
-  },
-  {
-    title: "Fox Ridge Trce Lot 7298",
+    title: "Fox Ridge Trace Lot 7298",
     category: {
       name: "Lot For Sale",
       href: "https://maps.apple.com/?address=4537%20Fox%20Ridge%20Trace,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.948097,-92.213751&q=Marked%20Location&_ext=EiYpTPUJNrX4RkAxlVg0SSUOV8A5ysovktv5RkBBHRLcnFENV8BQAw%3D%3D",
@@ -65,7 +31,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7298",
     originalPrice: 5000,
-    salePrice: 0,
+    salePrice: 2999,
     mapLink: "https://maps.apple.com/?address=4501%E2%80%934599%20Fox%20Ridge%20Trace,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.948317,-92.214177&q=Marked%20Location&_ext=EiYp71pojM/4RkAxzG+LBh8OV8A5bTCO6PX5RkBBtgJqWUsNV8BQBA%3D%3D"
   },
   {
@@ -82,7 +48,7 @@ const lots = [
     propertyTaxLink:
       "https://web.burnettcounty.org/access/master.asp?paprpid=7594",
     originalPrice: 5000,
-    salePrice: 0,
+    salePrice: 2999,
     mapLink: "https://maps.apple.com/?address=4101%E2%80%934299%20Honey%20Tree%20Rd,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.965929,-92.203836&q=Marked%20Location&_ext=EiYpA6U1fRH7RkAxHUbyQHUNV8A5gXpb2Tf8RkBBXbCQgqEMV8BQBA%3D%3D"
   },
 ];
