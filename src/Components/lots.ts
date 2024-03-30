@@ -1,21 +1,22 @@
 const lots = [
   {
-    title: "Fox Ridge Pass Lot 7233",
+    title: "Setting Sun Lot 8156",
     category: {
       name: "Lot For Sale",
-      href: "https://maps.apple.com/?ll=45.947313,-92.216388&q=Marked%20Location&_ext=EiQpEG3sjUH5RkAxSmdKTNkNV8A5EG3sjUH5RkBBSmdKTNkNV8A%3D",
+      href: "https://maps.apple.com/?address=4603%20Setting%20Sun%20Trail%20Way,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.964891,-92.218714&q=4603%20Setting%20Sun%20Trail%20Way",
     },
     description:
-      "This lot backs up to the paved county road. The entrance will be off of Fox Ridge Pass which is currently a dirt road.",
-    imageUrl: "/fox-ridge-pass.jpg",
+      "This lot has a driveway started and an address is on file with the county. It has also been cleared of trees so its ready to start buiding your dream home.",
+    imageUrl: "/setting_sun.jpeg",
     gisInfo:
-      "https://burnettcowi.wgxtreme.com/?parcelid=07-012-2-40-15-15-5%2015-215-012000",
+      "https://beacon.schneidercorp.com/Application.aspx?AppID=1195&LayerID=36060&PageTypeID=4&PageID=13664&KeyValue=07-012-2-40-15-09-5%2015-695-059000",
     propertyTaxLink:
-      "https://web.burnettcounty.org/access/master.asp?paprpid=7233",
-    originalPrice: 5000,
-    salePrice: 2999,
+      "https://web.burnettcounty.org/access/master.asp?paprpid=8156",
+    originalPrice: 15000,
+    mlsLink:
+      "https://www.redfin.com/WI/Danbury/4603-Setting-Sun-Trail-Way-54830/home/89052677",
     mapLink:
-      "https://maps.apple.com/?address=Fox%20Ridge%20Pass,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.947198,-92.216367&q=Voyager%20Village%20Lot-a&_ext=EiYpFs2pXq74RkAx3q91/z8OV8A5lKLPutT5RkBBHqlRU2wNV8BQBA%3D%3D",
+      "https://maps.apple.com/?address=4603%20Setting%20Sun%20Trail%20Way,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.964891,-92.218714&q=4603%20Setting%20Sun%20Trail%20Way",
   },
   {
     title: "Fox Ridge Trace Lot 7298",
@@ -32,7 +33,8 @@ const lots = [
       "https://web.burnettcounty.org/access/master.asp?paprpid=7298",
     originalPrice: 5000,
     salePrice: 2999,
-    mapLink: "https://maps.apple.com/?address=4501%E2%80%934599%20Fox%20Ridge%20Trace,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.948317,-92.214177&q=Marked%20Location&_ext=EiYp71pojM/4RkAxzG+LBh8OV8A5bTCO6PX5RkBBtgJqWUsNV8BQBA%3D%3D"
+    mapLink:
+      "https://maps.apple.com/?address=4501%E2%80%934599%20Fox%20Ridge%20Trace,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.948317,-92.214177&q=Marked%20Location&_ext=EiYp71pojM/4RkAxzG+LBh8OV8A5bTCO6PX5RkBBtgJqWUsNV8BQBA%3D%3D",
   },
   {
     title: "Honey Tree Rd Lot 7594",
@@ -49,7 +51,8 @@ const lots = [
       "https://web.burnettcounty.org/access/master.asp?paprpid=7594",
     originalPrice: 5000,
     salePrice: 2999,
-    mapLink: "https://maps.apple.com/?address=4101%E2%80%934299%20Honey%20Tree%20Rd,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.965929,-92.203836&q=Marked%20Location&_ext=EiYpA6U1fRH7RkAxHUbyQHUNV8A5gXpb2Tf8RkBBXbCQgqEMV8BQBA%3D%3D"
+    mapLink:
+      "https://maps.apple.com/?address=4101%E2%80%934299%20Honey%20Tree%20Rd,%20Danbury,%20WI%20%2054830,%20United%20States&ll=45.965929,-92.203836&q=Marked%20Location&_ext=EiYpA6U1fRH7RkAxHUbyQHUNV8A5gXpb2Tf8RkBBXbCQgqEMV8BQBA%3D%3D",
   },
 ];
 
