@@ -13,6 +13,8 @@
     "autoprefixer": "^10.4.0",
     "cross-env": "^7.0.3",
     "delay-cli": "^1.1.0",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "postcss-cli": "^8.3.1",
@@ -32,7 +34,8 @@
     "build:css": "cross-env TAILWIND_MODE=build NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/index.css",
     "watch:css": "cross-env TAILWIND_MODE=watch NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/index.css --watch",
     "react-scripts:start": "delay 5 && react-scripts start",
-    "react-scripts:build": "react-scripts build"
+    "react-scripts:build": "react-scripts build",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +53,11 @@
     ]
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "4.1.0",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/near-operation-file-preset": "^3.0.0",
+    "@graphql-codegen/typescript-react-apollo": "^4.1.0",
     "@types/react-helmet": "^6.1.5"
   }
 }
