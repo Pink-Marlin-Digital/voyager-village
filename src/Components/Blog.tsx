@@ -43,8 +43,15 @@ const Blog = ({ data, isLoading }: any) => {
                   {formatDate(data?.createdAt)} · {data?.minutes_read} min read
                 </p>
               </div>
-              <div className="bg-indigo-100 px-4 py-1 rounded-md text-indigo-800">
-                {data?.blog_type}
+              <div className="flex gap-2">
+                {data?.categories?.data?.map((category: any) => (
+                  <div
+                    className="bg-indigo-100 px-4 py-1 rounded-md text-indigo-800 text-sm"
+                    key={category.id}
+                  >
+                    {category?.attributes?.category}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="flex flex-col gap-6">
@@ -53,7 +60,7 @@ const Blog = ({ data, isLoading }: any) => {
                 {data?.article?.slice(0, 500)}
               </p>
               <a
-                href={`/blog/${data?.slug}`}
+                href={`/blogs/${data?.slug}`}
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <p className="text-indigo-600 font-semibold">Read More</p>
