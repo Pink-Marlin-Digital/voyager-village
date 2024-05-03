@@ -1,13 +1,46 @@
 import React from "react";
 import Accordion from "../../../Components/Accordion";
 
-const LeftSide = () => {
+const LeftSide = ({ search, setSearch }: any) => {
   return (
     <div className="flex flex-col gap-4">
       <h3 className="text-black text-2xl lg:text-3xl font-bold">Updates</h3>
       <p className="text-gray-500 text-md lg:text-lg font-normal">
         Stay informed with our latest insights and updates
       </p>
+      <div
+        className="relative mt-2 rounded-md shadow-sm mb-6"
+        style={{ height: 42 }}
+      >
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <span className="text-gray-500 sm:text-sm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </span>
+        </div>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="block w-full bg-gray-50 rounded-md border-0 py-1.5 pl-12 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          placeholder="Search"
+          style={{ height: 42 }}
+        />
+      </div>
       <div>
         <Accordion
           title="Share this update"

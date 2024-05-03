@@ -57,7 +57,7 @@ const Blog = ({ data, isLoading }: any) => {
             <div className="flex flex-col gap-6">
               <h3 className="text-black text-3xl font-bold">{data?.title}</h3>
               <p className="text-gray-500 text-md">
-                {data?.article?.slice(0, 500)}
+                {data?.article?.slice(0, 300)}
               </p>
               <a
                 href={`/blogs/${data?.slug}`}

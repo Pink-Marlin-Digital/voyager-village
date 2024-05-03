@@ -9,6 +9,7 @@ import RightSide from "./RightSide";
 const DetailBlog = () => {
   const [data, setData] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [search, setSearch] = useState("");
   const params = useParams();
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const DetailBlog = () => {
         const getData = await getDetailBlogData({
           filters: { slug: { eq: params.slug } },
         });
-        setData(getData?.voyagerArticles?.data?.[0]?.attributes || []);
+        setData(getData?.voyagerArticles?.data?.[0] || []);
       } catch (error) {
         console.log(error);
       } finally {
@@ -33,7 +34,7 @@ const DetailBlog = () => {
       <Hero />
       <div className="bg-gray-800 px-2 pb-6 md:py-6 pt-6 lg:p-16 w-full">
         <div className="bg-white rounded-md p-6 lg:p-20 flex lg:flex-row flex-col gap-20 w-full">
-          <LeftSide />
+          <LeftSide search={search} setSearch={setSearch} />
           <RightSide data={data} isLoading={isLoading} />
         </div>
       </div>

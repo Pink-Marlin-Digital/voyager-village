@@ -87,7 +87,7 @@ const AllUpdates = () => {
   return (
     <>
       <Hero />
-      <div className="bg-gray-800 px-2 pb-6 md:py-6 pt-6  lg:p-16 w-full">
+      <div className="bg-gray-800 px-2 pb-6 md:py-6 pt-6 lg:p-16 w-full">
         <div className="bg-white rounded-md p-6 lg:p-20 grid grid-cols-1 lg:grid-cols-12 gap-14 w-full">
           <div className="col-span-1 lg:col-span-4">
             <LeftSide
@@ -109,6 +109,7 @@ const AllUpdates = () => {
               pageCount={data?.meta?.pagination?.pageCount}
               total={data?.meta?.pagination?.total}
               pageSize={data?.meta?.pagination?.pageSize}
+              search={search}
             />
           </div>
         </div>
