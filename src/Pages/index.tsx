@@ -15,7 +15,9 @@ export const Index = () => {
     const fetch = async () => {
       try {
         setIsLoading(true);
-        const getData = await getblogData({});
+        const getData = await getblogData({
+          sort: ["id:desc"],
+        });
         setData(getData?.voyagerArticles?.data || []);
       } catch (error) {
         console.log(error);

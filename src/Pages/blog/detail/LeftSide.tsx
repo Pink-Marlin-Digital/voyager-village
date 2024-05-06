@@ -1,14 +1,43 @@
 import React from "react";
 import Accordion from "../../../Components/Accordion";
+import { useParams } from "react-router-dom";
 
 const LeftSide = ({ search, setSearch }: any) => {
+  const params = useParams();
+  const shareToFacebook = () => {
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${process.env.REACT_APP_API}/blogs/${params.slug}`,
+      "_blank"
+    );
+  };
+
+  const shareToX = () => {
+    window.open(
+      `https://example.com/share?url=${process.env.REACT_APP_API}/blogs/${params.slug}`,
+      "_blank"
+    );
+  };
+
+  const shareToGitHub = () => {
+    window.open(
+      `https://github.com/login?return_to=${process.env.REACT_APP_API}/blogs/${params.slug}`,
+      "_blank"
+    );
+  };
+
+  const shareToDribbble = () => {
+    window.open(
+      `https://dribbble.com/session/new?return_to=${process.env.REACT_APP_API}/blogs/${params.slug}`,
+      "_blank"
+    );
+  };
   return (
     <div className="flex flex-col gap-4">
       <h3 className="text-black text-2xl lg:text-3xl font-bold">Updates</h3>
       <p className="text-gray-500 text-md lg:text-lg font-normal">
         Stay informed with our latest insights and updates
       </p>
-      <div
+      {/* <div
         className="relative mt-2 rounded-md shadow-sm mb-6"
         style={{ height: 42 }}
       >
@@ -40,13 +69,13 @@ const LeftSide = ({ search, setSearch }: any) => {
           placeholder="Search"
           style={{ height: 42 }}
         />
-      </div>
+      </div> */}
       <div>
         <Accordion
           title="Share this update"
           content={
             <div className="flex gap-6 items-center">
-              <div>
+              <div onClick={() => shareToFacebook()} className="cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -60,7 +89,7 @@ const LeftSide = ({ search, setSearch }: any) => {
                   />
                 </svg>
               </div>
-              <div>
+              <div onClick={() => shareToX()} className="cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -74,7 +103,7 @@ const LeftSide = ({ search, setSearch }: any) => {
                   />
                 </svg>
               </div>
-              <div>
+              <div onClick={() => shareToGitHub()} className="cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -101,7 +130,7 @@ const LeftSide = ({ search, setSearch }: any) => {
                   </defs>
                 </svg>
               </div>
-              <div>
+              <div onClick={() => shareToDribbble()} className="cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
