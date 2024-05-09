@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from "../Accordion";
 import { getcategoryData } from "../../utils/pageQueries/Category";
+import { useMediaQuery } from "usehooks-ts";
 
 const LeftSide = ({
   setCategories,
@@ -10,9 +11,11 @@ const LeftSide = ({
   search,
   setSearch,
 }: any) => {
+  const [isShowFilter, setIsShowFilter] = useState(false);
   const handleRadioChange = (value: string) => {
     setSortValue(value);
   };
+  const matches = useMediaQuery("(min-width: 1023px)");
 
   useEffect(() => {
     const fetch = async () => {
@@ -73,65 +76,157 @@ const LeftSide = ({
           style={{ height: 42 }}
         />
       </div>
-      <Accordion
-        title="Sort"
-        content={
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <input
-                type="radio"
-                value="desc"
-                onChange={() => handleRadioChange("desc")}
-                className="accent-indigo-600"
-                checked={sortValue === "desc"}
-                style={{ width: 16, height: 16 }}
-              />
-              <p className="font-medium text-gray-900">Newest</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <input
-                type="radio"
-                value="asc"
-                onChange={() => handleRadioChange("asc")}
-                className="accent-indigo-600"
-                style={{ width: 16, height: 16 }}
-                checked={sortValue === "asc"}
-              />
-              <p className="font-medium text-gray-900">Oldest</p>
-            </div>
-          </div>
-        }
-      />
-      <Accordion
-        title="Category"
-        content={
-          <div className="flex flex-col gap-4">
-            {categories.map(
-              (item: { value: boolean; label: string }, index: number) => (
-                <div key={index} className="flex items-center gap-4">
+      <div
+        onClick={() => setIsShowFilter(!isShowFilter)}
+        className="w-full flex gap-2 bg-[#E0E7FF] rounded-[4px] cursor-pointer py-[9px] items-center justify-center lg:hidden"
+      >
+        <p className="text-[#4F46E5] text-md font-normal">All Filter</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V6.586C3.00006 6.85119 3.10545 7.10551 3.293 7.293L9.707 13.707C9.89455 13.8945 9.99994 14.1488 10 14.414V21L14 17V14.414C14.0001 14.1488 14.1055 13.8945 14.293 13.707L20.707 7.293C20.8946 7.10551 20.9999 6.85119 21 6.586V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289Z"
+            stroke="#4F46E5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+      {isShowFilter && !matches && (
+        <>
+          <Accordion
+            title="Sort"
+            content={
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
                   <input
-                    type="checkbox"
-                    checked={item.value}
-                    onChange={(e) => {
-                      const updatedOptions = categories.map((option: any) => {
-                        if (option.label === item.label) {
-                          return { ...option, value: e.target.checked };
-                        }
-                        return option;
-                      });
-                      setCategories(updatedOptions);
-                    }}
+                    type="radio"
+                    value="desc"
+                    onChange={() => handleRadioChange("desc")}
                     className="accent-indigo-600"
+                    checked={sortValue === "desc"}
+                    style={{ width: 16, height: 16 }}
                   />
-                  <p className="text-md font-medium text-gray-900">
-                    {item.label}
-                  </p>
+                  <p className="font-medium text-gray-900">Newest</p>
                 </div>
-              )
-            )}
-          </div>
-        }
-      />
+                <div className="flex items-center gap-4">
+                  <input
+                    type="radio"
+                    value="asc"
+                    onChange={() => handleRadioChange("asc")}
+                    className="accent-indigo-600"
+                    style={{ width: 16, height: 16 }}
+                    checked={sortValue === "asc"}
+                  />
+                  <p className="font-medium text-gray-900">Oldest</p>
+                </div>
+              </div>
+            }
+          />
+          <Accordion
+            title="Category"
+            content={
+              <div className="flex flex-col gap-4">
+                {categories.map(
+                  (item: { value: boolean; label: string }, index: number) => (
+                    <div key={index} className="flex items-center gap-4">
+                      <input
+                        type="checkbox"
+                        checked={item.value}
+                        onChange={(e) => {
+                          const updatedOptions = categories.map(
+                            (option: any) => {
+                              if (option.label === item.label) {
+                                return { ...option, value: e.target.checked };
+                              }
+                              return option;
+                            }
+                          );
+                          setCategories(updatedOptions);
+                        }}
+                        className="accent-indigo-600"
+                      />
+                      <p className="text-md font-medium text-gray-900">
+                        {item.label}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            }
+          />
+        </>
+      )}
+      {matches && (
+        <>
+          <Accordion
+            title="Sort"
+            content={
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <input
+                    type="radio"
+                    value="desc"
+                    onChange={() => handleRadioChange("desc")}
+                    className="accent-indigo-600"
+                    checked={sortValue === "desc"}
+                    style={{ width: 16, height: 16 }}
+                  />
+                  <p className="font-medium text-gray-900">Newest</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <input
+                    type="radio"
+                    value="asc"
+                    onChange={() => handleRadioChange("asc")}
+                    className="accent-indigo-600"
+                    style={{ width: 16, height: 16 }}
+                    checked={sortValue === "asc"}
+                  />
+                  <p className="font-medium text-gray-900">Oldest</p>
+                </div>
+              </div>
+            }
+          />
+          <Accordion
+            title="Category"
+            content={
+              <div className="flex flex-col gap-4">
+                {categories.map(
+                  (item: { value: boolean; label: string }, index: number) => (
+                    <div key={index} className="flex items-center gap-4">
+                      <input
+                        type="checkbox"
+                        checked={item.value}
+                        onChange={(e) => {
+                          const updatedOptions = categories.map(
+                            (option: any) => {
+                              if (option.label === item.label) {
+                                return { ...option, value: e.target.checked };
+                              }
+                              return option;
+                            }
+                          );
+                          setCategories(updatedOptions);
+                        }}
+                        className="accent-indigo-600"
+                      />
+                      <p className="text-md font-medium text-gray-900">
+                        {item.label}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            }
+          />
+        </>
+      )}
     </div>
   );
 };
