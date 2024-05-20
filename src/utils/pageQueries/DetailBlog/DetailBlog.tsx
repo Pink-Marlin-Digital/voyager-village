@@ -1,26 +1,11 @@
 import gql from "graphql-tag";
 
 export default gql`
-  query blog(
-    $sort: [String]
-    $pagination: PaginationArg
-    $filters: VoyagerArticleFiltersInput
-  ) {
-    voyagerArticles(sort: $sort, pagination: $pagination, filters: $filters) {
-      meta {
-        pagination {
-          total
-          page
-          pageSize
-          pageCount
-        }
-      }
+  query DetailBlog($filters: VoyagerArticleFiltersInput) {
+    voyagerArticles(filters: $filters) {
       data {
         id
         attributes {
-          title
-          article
-          slug
           categories {
             data {
               id
@@ -29,6 +14,9 @@ export default gql`
               }
             }
           }
+          title
+          slug
+          article
           blog_image {
             data {
               id

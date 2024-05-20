@@ -15,7 +15,9 @@ export const Index = () => {
     const fetch = async () => {
       try {
         setIsLoading(true);
-        const getData = await getblogData({});
+        const getData = await getblogData({
+          sort: ["id:desc"],
+        });
         setData(getData?.voyagerArticles?.data || []);
       } catch (error) {
         console.log(error);
@@ -29,7 +31,7 @@ export const Index = () => {
   return (
     <>
       <Hero />
-      <div className="bg-gray-800 px-2 pb-6 md:pb-0 pt-6 md:pt-0 lg:p-16">
+      <div className="bg-gray-800 px-2 pb-6 md:py-6 pt-6  lg:p-16">
         <Blog data={data?.[0]?.attributes} isLoading={isLoading} />
         <About />
         <FAQ />

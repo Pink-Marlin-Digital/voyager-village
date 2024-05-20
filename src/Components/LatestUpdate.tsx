@@ -1,5 +1,6 @@
 import React from "react";
 import CardLatestUpdate from "./CardLatestUpdate";
+import { Link } from "react-router-dom";
 
 const LatestUpdate = ({ data, isLoading }: any) => {
   return (
@@ -17,12 +18,13 @@ const LatestUpdate = ({ data, isLoading }: any) => {
           <>
             <div className="grid grid-cols-12 w-full gap-6">
               {data.slice(0, 3).map((item: any) => (
-                <div
+                <Link
+                  to={`/blogs/${item.attributes.slug}`}
                   key={item.id}
-                  className="col-span-12 lg:col-span-4 md:col-span-6 h-full"
+                  className="col-span-12 lg:col-span-4 md:col-span-6 h-full cursor-pointer"
                 >
                   <CardLatestUpdate item={item.attributes} />
-                </div>
+                </Link>
               ))}
             </div>
             {data.length >= 4 && (
