@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from "react";
+import React, { useState } from "react";
 import posts from "./lots";
 
 export const AvailableLots = () => {
@@ -9,6 +9,51 @@ export const AvailableLots = () => {
     style: "currency",
     currency: "USD",
   });
+
+  const ImageCarousel = ({ images }: { images: string | string[] }) => {
+    const imgs = Array.isArray(images) ? images : [images];
+    const [idx, setIdx] = useState(0);
+    if (imgs.length === 1) {
+      return <img className="h-[36rem] w-full object-cover object-bottom" src={imgs[0]} alt="" />;
+    }
+    const prev = () => setIdx((i) => (i - 1 + imgs.length) % imgs.length);
+    const next = () => setIdx((i) => (i + 1) % imgs.length);
+    return (
+      <div className="relative">
+        <img className="h-[36rem] w-full object-cover object-bottom" src={imgs[idx]} alt="" />
+        <button
+          type="button"
+          onClick={prev}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={next}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
   return (
     <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 rounded mt-8">
       <div className="absolute inset-0">
@@ -25,18 +70,14 @@ export const AvailableLots = () => {
             All lots in Voyager Village are 1/2 acre.
           </p>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+        <div className="mt-12 w-full grid gap-5 lg:grid-cols-1">
           {posts.map((post) => (
             <div
               key={post.title}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
               <div className="flex-shrink-0">
-                <img
-                  className="h-48 w-full object-cover"
-                  src={post.imageUrl}
-                  alt=""
-                />
+                <ImageCarousel images={post.imageUrl} />
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
@@ -97,7 +138,7 @@ export const AvailableLots = () => {
                     </a>
                   </div>
                   <div
-                    className="border-2 rounded flex p-2"
+                    className="border-2 rounded flex p-2 justify-center"
                     style={{ flexBasis: "40%" }}
                   >
                     <a
